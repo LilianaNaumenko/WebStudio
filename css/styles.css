@@ -1,0 +1,71 @@
+/* основной цвет -  #212121; */
+/* синий цвет - #2196F3 */
+/* белый цвет #FFFFFF */
+/* вторичный черный цвет- #757575;  */
+/* прозрачный цвет для футера  rgba(255, 255, 255, 0.6); */
+body {
+  color: var(--basic-black-color);
+}
+:root {
+  --basic-black-color: #212121;
+  --blue-color: #2196f3;
+  --white-color: #ffffff;
+  --secondary-black-color: #757575;
+  --footer-shadowy: rgba(255, 255, 255, 0.6);
+}
+/* Шапка профиля */
+.link-page {
+  color: var(--basic-black-color);
+}
+
+.link-page:hover,
+.link-page:focus {
+  color: var(--blue-color);
+}
+.nav-header {
+  color: var(--secondary-black-color);
+}
+.nav-header:hover,
+.nav-header:focus {
+  color: var(--blue-color);
+}
+/* Середина контента (мейн) */
+
+/* Секция основная  */
+.main-section {
+  background-color: #2f303a;
+}
+.main-section-h {
+  color: var(--white-color);
+}
+.main-section-button {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+}
+/* секция чем мы занимаемся */
+.activity-text {
+  color: var(--secondary-black-color);
+}
+
+/* секция команды */
+
+.command {
+  background-color: #f5f4fa;
+}
+
+.command-person {
+  color: var(--secondary-black-color);
+}
+
+/* Футер страницы */
+
+.footer {
+  background-color: #2f303a;
+}
+
+.footer-adress {
+  color: var(--white-color);
+}
+.footer-nav {
+  color: var(--footer-shadowy);
+}
