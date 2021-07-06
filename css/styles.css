@@ -5,7 +5,15 @@
 /* прозрачный цвет для футера  rgba(255, 255, 255, 0.6); */
 body {
   color: var(--basic-black-color);
+
+  letter-spacing: 0.03em;
+  font-family: Roboto, sans-serif;
 }
+
+ul {
+  list-style: none;
+}
+
 :root {
   --basic-black-color: #212121;
   --blue-color: #2196f3;
@@ -14,8 +22,29 @@ body {
   --footer-shadowy: rgba(255, 255, 255, 0.6);
 }
 /* Шапка профиля */
+.logo {
+  color: var(--basic-black-color);
+  text-decoration: none;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.span {
+  color: var(--blue-color);
+}
+
 .link-page {
   color: var(--basic-black-color);
+
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .link-page:hover,
@@ -24,6 +53,11 @@ body {
 }
 .nav-header {
   color: var(--secondary-black-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 .nav-header:hover,
 .nav-header:focus {
@@ -34,6 +68,13 @@ body {
 /* Секция основная  */
 .main-section {
   background-color: #2f303a;
+
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
 }
 .main-section-h {
   color: var(--white-color);
@@ -41,10 +82,29 @@ body {
 .main-section-button {
   color: var(--white-color);
   background-color: var(--blue-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
 }
 /* секция чем мы занимаемся */
+.activity-title {
+  font-size: 14px;
+  line-height: 1.14;
+}
 .activity-text {
   color: var(--secondary-black-color);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* чем мы занимаемся */
+.direction {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 /* секция команды */
@@ -52,9 +112,24 @@ body {
 .command {
   background-color: #f5f4fa;
 }
+.command-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
 
 .command-person {
   color: var(--secondary-black-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.command-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.9;
 }
 
 /* Футер страницы */
@@ -62,10 +137,53 @@ body {
 .footer {
   background-color: #2f303a;
 }
+.logo-footer {
+  color: var(--white-color);
+  text-decoration: none;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
 
 .footer-adress {
   color: var(--white-color);
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.19;
+  font-style: normal;
 }
 .footer-nav {
   color: var(--footer-shadowy);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+/* Портфолио */
+/* Фильтры */
+.filters:hover,
+.filters:focus {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+}
+.filters {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.portfolio-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-text {
+  color: var(--secondary-black-color);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
 }
