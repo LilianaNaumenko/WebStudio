@@ -21,6 +21,13 @@ ul {
   --secondary-black-color: #757575;
   --footer-shadowy: rgba(255, 255, 255, 0.6);
 }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
 /* Шапка профиля */
 .logo {
   color: var(--basic-black-color);
@@ -82,11 +89,15 @@ ul {
 .main-section-button {
   color: var(--white-color);
   background-color: var(--blue-color);
+  border: none;
+
+  padding: 10px 32px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
+  border-radius: 4px;
 }
 /* секция чем мы занимаемся */
 .activity-title {
@@ -174,6 +185,12 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  border: none;
+
+  padding: 6px 22px;
 }
 .portfolio-title {
   font-size: 18px;
