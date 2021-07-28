@@ -3,6 +3,16 @@
 /* белый цвет #FFFFFF */
 /* вторичный черный цвет- #757575;  */
 /* прозрачный цвет для футера  rgba(255, 255, 255, 0.6); */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   color: var(--basic-black-color);
 
@@ -12,6 +22,9 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 :root {
@@ -26,6 +39,8 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /* Шапка профиля */
@@ -41,6 +56,10 @@ ul {
 
 .span {
   color: var(--blue-color);
+}
+.link-ul-page {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .link-page {
@@ -82,14 +101,20 @@ ul {
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .main-section-h {
   color: var(--white-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .main-section-button {
   color: var(--white-color);
   background-color: var(--blue-color);
   border: none;
+  margin-top: 0;
 
   padding: 10px 32px;
 
@@ -100,9 +125,15 @@ ul {
   border-radius: 4px;
 }
 /* секция чем мы занимаемся */
+.activity-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .activity-title {
   font-size: 14px;
   line-height: 1.14;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 .activity-text {
   color: var(--secondary-black-color);
@@ -110,24 +141,43 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* чем мы занимаемся */
+.direction-section {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
 .direction {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 /* секция команды */
 
-.command {
+.command-section {
   background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.command-photo {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 .command-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .command-person {
@@ -136,17 +186,23 @@ ul {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
+  margin-top: 0;
 }
 .command-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.9;
+
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 /* Футер страницы */
 
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .logo-footer {
   color: var(--white-color);
@@ -156,6 +212,9 @@ ul {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .footer-adress {
@@ -166,6 +225,9 @@ ul {
   font-size: 14px;
   line-height: 1.19;
   font-style: normal;
+
+  margin-top: 0;
+  margin-bottom: 9px;
 }
 .footer-nav {
   color: var(--footer-shadowy);
@@ -173,6 +235,17 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+.footer-nav-tel {
+  color: var(--footer-shadowy);
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* Портфолио */
 /* Фильтры */
@@ -192,10 +265,18 @@ ul {
 
   padding: 6px 22px;
 }
+
+.portfolio-img {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .portfolio-title {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 .portfolio-text {
   color: var(--secondary-black-color);
@@ -203,4 +284,7 @@ ul {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
+
+  margin-top: 0;
+  margin-bottom: 20px;
 }
