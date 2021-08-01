@@ -18,6 +18,7 @@ body {
 
   letter-spacing: 0.03em;
   font-family: Roboto, sans-serif;
+  margin: 0;
 }
 
 ul {
@@ -44,7 +45,7 @@ ul {
 }
 
 /* Шапка профиля */
-.header-div {
+.header-container {
   display: flex;
   align-items: center;
 }
@@ -63,17 +64,17 @@ ul {
 .span {
   color: var(--blue-color);
 }
-.link-ul-page {
+.list {
   margin-top: 0;
   margin-bottom: 0;
   display: flex;
 }
 /* контакты в шапке */
-.link-ul-contact {
+.link-contact {
   display: flex;
   margin-left: auto;
 }
-.link-li-page:not(:last-child) {
+.link-item-page:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -91,18 +92,22 @@ ul {
   padding-top: 32px;
   padding-bottom: 32px;
 }
-
+.active-page {
+  color: var(--blue-color);
+}
 .link-page:hover,
 .link-page:focus {
   color: var(--blue-color);
 }
-.nav-header {
+.link-header {
   color: var(--secondary-black-color);
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.02em;
+
+  text-decoration: none;
 }
 .nav-header:hover,
 .nav-header:focus {
@@ -124,7 +129,7 @@ ul {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.main-section-h {
+.main-section-title {
   color: var(--white-color);
   margin-top: 0;
   margin-bottom: 30px;
@@ -147,9 +152,8 @@ ul {
 .activity-section {
   padding-top: 94px;
   padding-bottom: 94px;
-  
 }
-.activity-li:not(:last-child){
+.activity-item:not(:last-child) {
   margin-right: 30px;
 }
 .activity-title {
@@ -157,7 +161,6 @@ ul {
   line-height: 1.14;
   margin-top: 0;
   margin-bottom: 10px;
-
 }
 .activity-text {
   color: var(--secondary-black-color);
@@ -170,16 +173,15 @@ ul {
   width: 270px;
 }
 
-
-
 /* чем мы занимаемся */
 .direction-section {
   padding-top: 0;
   padding-bottom: 94px;
+}
+.direction-list {
   display: flex;
 }
- 
- 
+
 .direction {
   font-size: 36px;
   line-height: 1.17;
@@ -188,11 +190,11 @@ ul {
   margin-top: 0;
   margin-bottom: 50px;
 }
-.direction-li{
-  width: 370px; 
-  
+.direction-item {
+  width: 370px;
 }
-.
+.direction-item:not(:last-child) {
+  margin-right: 30px;
 }
 /* секция команды */
 
@@ -205,6 +207,8 @@ ul {
   margin-top: 0;
   margin-bottom: 30px;
   width: 270px;
+
+  display: block;
 }
 .command-title {
   font-weight: 700;
@@ -215,7 +219,16 @@ ul {
   margin-top: 0;
   margin-bottom: 50px;
 }
-
+.command-item:not(:last-child) {
+  margin-right: 30px;
+}
+.command-item {
+  text-align: center;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .command-person {
   color: var(--secondary-black-color);
 
@@ -223,6 +236,7 @@ ul {
   font-size: 16px;
   line-height: 1.9;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 .command-name {
   font-weight: 500;
@@ -254,7 +268,7 @@ ul {
   display: inline-block;
 }
 
-.footer-adress {
+.footer-address {
   color: var(--white-color);
 
   font-family: Roboto;
@@ -267,8 +281,9 @@ ul {
   margin-bottom: 9px;
 }
 
-.footer-nav {
+.footer-email {
   color: var(--footer-shadowy);
+  text-decoration: none;
 
   font-weight: 400;
   font-size: 14px;
@@ -277,8 +292,9 @@ ul {
   margin-bottom: 9px;
   display: inline-block;
 }
-.footer-nav-tel {
+.footer-tel {
   color: var(--footer-shadowy);
+  text-decoration: none;
 
   font-weight: 400;
   font-size: 14px;
