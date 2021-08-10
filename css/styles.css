@@ -104,6 +104,7 @@ header {
   color: var(--blue-color);
 }
 .link-header {
+  display: flex;
   color: var(--secondary-black-color);
 
   font-weight: 500;
@@ -112,6 +113,24 @@ header {
   letter-spacing: 0.02em;
 
   text-decoration: none;
+  align-items: center;
+}
+.mail::before {
+  content: "";
+  width: 16px;
+  height: 12px;
+  margin-right: 16px;
+  background-image: url("../images.new/mail.svg");
+  margin-right: 10px;
+}
+
+.tell::before {
+  content: "";
+  width: 10px;
+  height: 16px;
+  margin-right: 16px;
+  background-image: url("../images.new/tell.svg");
+  margin-right: 10px;
 }
 .link-header:hover,
 .link-header:focus {
