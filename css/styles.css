@@ -115,26 +115,29 @@ header {
   text-decoration: none;
   align-items: center;
 }
-.mail::before {
-  content: "";
+.icon-mail {
   width: 16px;
   height: 12px;
-  margin-right: 16px;
-  background-image: url("../images.new/mail.svg");
   margin-right: 10px;
+  fill: var(--secondary-black-color);
 }
-
-.tell::before {
-  content: "";
+.icon-tel {
   width: 10px;
   height: 16px;
-  margin-right: 16px;
-  background-image: url("../images.new/tell.svg");
   margin-right: 10px;
+  fill: var(--secondary-black-color);
 }
 .link-header:hover,
 .link-header:focus {
   color: var(--blue-color);
+}
+.link-header:hover .icon-mail,
+.link-header:focus .icon-mail {
+  fill: var(--blue-color);
+}
+.link-header:hover .icon-tel,
+.link-header:focus .icon-tel {
+  fill: var(--blue-color);
 }
 /* Середина контента (мейн) */
 
@@ -148,7 +151,7 @@ header {
   margin-right: auto;
   background-image: url("../images.new/office-copy.jpg");
   background-color: #2f303a;
-  /* background: rgba(47, 48, 58, 0.4); */
+
   /* background-size: contain; */
 }
 /* Секция основная  */
@@ -181,6 +184,8 @@ header {
   line-height: 1.9;
   letter-spacing: 0.06em;
   border-radius: 4px;
+
+  cursor: pointer;
 }
 /* секция чем мы занимаемся */
 .activity-section {
@@ -190,30 +195,21 @@ header {
 .activity-item:not(:last-child) {
   margin-right: 30px;
 }
-/* фоновое иконки внимание к деталям */
-.activity-item::before {
-  content: "";
-  display: block;
+
+.activity-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
   height: 120px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-color: #f5f4fa;
+  background: #f5f4fa;
+  border-radius: 4px;
   margin-bottom: 30px;
-
-  /* background-image: url("../images.new/antenna.svg"); */
 }
 
-.antenna::before {
-  background-image: url("../images.new/antenna.svg");
-}
-.clock::before {
-  background-image: url("../images.new/clock\ .svg");
-}
-.diagram::before {
-  background-image: url("../images.new/diagram\ .svg");
-}
-.astronaut::before {
-  background-image: url("../images.new/astronaut\ .svg");
+.activity-icon {
+  width: 70px;
+  height: 70px;
 }
 .activity-title {
   font-size: 14px;
@@ -316,6 +312,8 @@ header {
 .social-network {
   display: block;
   padding: 12px;
+  width: 44px;
+  height: 44px;
 }
 .social-network:hover,
 .social-network:focus {
@@ -323,9 +321,17 @@ header {
   border-radius: 50%;
 }
 
-.social-network img {
-  display: flex;
+.social-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
 }
+
+.social-network:hover .social-svg,
+.social-network:focus .social-svg {
+  fill: var(--white-color);
+}
+
 /* Футер страницы */
 
 .footer {
