@@ -302,6 +302,38 @@ header {
   margin-top: 0;
   margin-bottom: 10px;
 }
+
+/* Постоянные клиенты */
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-title {
+  font-style: 400;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17px;
+  color: var(--basic-black-color);
+  text-align: center;
+  margin-top: 94px;
+}
+.clients-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--blue-color);
+  border: 1px solid var(--blue-color);
+  cursor: pointer;
+}
+
 /* Иконки соц-сети */
 .social-list {
   display: flex;
