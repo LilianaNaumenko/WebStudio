@@ -365,7 +365,12 @@ header {
 }
 
 /* Футер страницы */
-
+.container-footer-icon {
+  display: flex;
+}
+.container-join {
+  margin-left: 70px;
+}
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -418,6 +423,30 @@ header {
   line-height: 1.7;
   margin-top: 0;
   margin-bottom: 0;
+}
+.footer-join {
+  font-style: 400;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  color: var(--white-color);
+}
+
+.social-icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: var(--white-color);
+}
+.footer-network {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-list {
+  display: flex;
 }
 /* Портфолио */
 /* Фильтры */
