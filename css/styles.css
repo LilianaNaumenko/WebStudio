@@ -506,6 +506,22 @@ header {
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
+.container-photo{
+  position:relative; 
+}
+.container-photo::before{
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-color);
+  position: absolute;
+
+  opacity: 0;
+}
+.container-photo:hover::before{
+  opacity: 0.8;
+}
 
 .portfolio-item:hover{
   background: #FFFFFF;
@@ -518,6 +534,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   margin-bottom: 20px;
   width: 370px;
 }
+
 
 .portfolio-title {
   font-size: 18px;
