@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="button-close">
+          <img src="./images.new/Vector.svg" alt="" />
+        </button>
+      </div>
+    </div>
     <header>
       <div class="container header-container">
         <a class="logo" href="./index.html">
@@ -56,7 +63,9 @@
           <h1 class="main-section-title">
             Эффективные решения<br />для вашего бизнеса
           </h1>
-          <button class="main-section-button">Заказать услугу</button>
+          <button data-modal-open class="main-section-button">
+            Заказать услугу
+          </button>
         </section>
       </div>
       <section class="activity-section">
@@ -118,35 +127,33 @@
         <div class="container">
           <h2 class="direction">Чем мы занимаемся</h2>
           <ul class="direction-list">
-            
             <li class="direction-item">
               <div class="container-position mac">
-              <img
-                class="img-class"
-                src="./images.new/specification1.jpg"
-                alt="Человек за компьютером"
-              /> 
-            </div>   
+                <img
+                  class="img-class"
+                  src="./images.new/specification1.jpg"
+                  alt="Человек за компьютером"
+                />
+              </div>
             </li>
-            <li class="direction-item">    
-              <div class="container-position iphone">       
-              <img
-                class="img-class"
-                src="./images.new/specification2.jpg"
-                alt="Человек смотрит в телефон"
-              />
-            </div>  
+            <li class="direction-item">
+              <div class="container-position iphone">
+                <img
+                  class="img-class"
+                  src="./images.new/specification2.jpg"
+                  alt="Человек смотрит в телефон"
+                />
+              </div>
             </li>
             <li class="direction-item">
               <div class="container-position ipad">
-              <img
-                class="img-class"
-                src="./images.new/specification3.jpg"
-                alt="Человек смотрит в планшет"
-              />
-            </div>
+                <img
+                  class="img-class"
+                  src="./images.new/specification3.jpg"
+                  alt="Человек смотрит в планшет"
+                />
+              </div>
             </li>
-      
           </ul>
         </div>
       </section>
@@ -315,46 +322,43 @@
           </ul>
         </div>
       </section>
-        <section class="clients">
-          <div class="container">
-            <h2 class="clients-title">Постоянные клиенты</h2>
-            <ul class="clients-list">
-              <li class="clients-icon">
-                <svg width="41" height="47">
-                  <use href="./images.new/symbol-defs.svg#ya-co"></use>
-                </svg>
-              </li>
-              <li class="clients-icon">
-                <svg width="40" height="52">
-                  <use href="./images.new/symbol-defs.svg#taglive-here"></use>
-                </svg>
-              </li>
-              <li class="clients-icon">
-                <svg width="45" height="42">
-                  <use href="./images.new/symbol-defs.svg#company"></use>
-                </svg>
-              </li>
-              <li class="clients-icon">
-                <svg width="106" height="60">
-                  <use href="./images.new/symbol-defs.svg#foster-peters"></use>
-                </svg>
-              </li>
-              <li class="clients-icon">
-                <svg width="63" height="47">
-                  <use href="./images.new/symbol-defs.svg#brand"></use>
-                </svg>
-              </li>
-              <li class="clients-icon">
-                <svg width="94" height="45">
-                  <use
-                    href="./images.new/symbol-defs.svg#company-tagline"
-                  ></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </section>
-      
+      <section class="clients">
+        <div class="container">
+          <h2 class="clients-title">Постоянные клиенты</h2>
+          <ul class="clients-list">
+            <li class="clients-icon">
+              <svg width="41" height="47">
+                <use href="./images.new/symbol-defs.svg#ya-co"></use>
+              </svg>
+            </li>
+            <li class="clients-icon">
+              <svg width="40" height="52">
+                <use href="./images.new/symbol-defs.svg#taglive-here"></use>
+              </svg>
+            </li>
+            <li class="clients-icon">
+              <svg width="45" height="42">
+                <use href="./images.new/symbol-defs.svg#company"></use>
+              </svg>
+            </li>
+            <li class="clients-icon">
+              <svg width="106" height="60">
+                <use href="./images.new/symbol-defs.svg#foster-peters"></use>
+              </svg>
+            </li>
+            <li class="clients-icon">
+              <svg width="63" height="47">
+                <use href="./images.new/symbol-defs.svg#brand"></use>
+              </svg>
+            </li>
+            <li class="clients-icon">
+              <svg width="94" height="45">
+                <use href="./images.new/symbol-defs.svg#company-tagline"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container container-footer-icon">
@@ -416,5 +420,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

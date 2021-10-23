@@ -21,7 +21,7 @@ body {
   margin: 0;
 }
 
-ul {
+body ul {
   list-style: none;
   padding: 0;
   margin-top: 0;
@@ -187,6 +187,46 @@ header {
 
   cursor: pointer;
 }
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  background-color: var(--white-color);
+  z-index: 500;
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* секция чем мы занимаемся */
 .activity-section {
   padding-top: 94px;
@@ -252,32 +292,30 @@ header {
 .direction-item:not(:last-child) {
   margin-right: 30px;
 }
-.container-position::before{
-  
-color: var(--white-color);
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-padding: 27px 82px;
+.container-position::before {
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 27px 82px;
 
+  display: inline-block;
+  width: 370px;
+  height: 70px;
 
-display: inline-block;
-width: 370px;
-height: 70px;
-
-background-color: rgba(47, 48, 58, 0.8);
-position: absolute;
-top: 224px;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  top: 224px;
 }
-.mac::before{
-  content: 'ДЕСКОПНЫЕ ПРИЛОЖЕНИЯ';
+.mac::before {
+  content: "ДЕСКОПНЫЕ ПРИЛОЖЕНИЯ";
 }
-.iphone::before{
-  content: 'МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ';
+.iphone::before {
+  content: "МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ";
 }
 
-.ipad::before{
-  content: 'ДИЗАЙНЕРСКИЕ РЕШЕНИЯ';  
+.ipad::before {
+  content: "ДИЗАЙНЕРСКИЕ РЕШЕНИЯ";
 }
 
 /* секция команды */
@@ -333,11 +371,9 @@ top: 224px;
 }
 
 /* Постоянные клиенты */
-.clients{
-  
+.clients {
   padding-top: 94px;
   padding-bottom: 94px;
-
 }
 .clients-list {
   display: flex;
@@ -540,46 +576,43 @@ top: 224px;
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
-.container-photo{
-  position:relative; 
+.container-photo {
+  position: relative;
   overflow: hidden;
-
-
-
 }
-.container-photo::before{
+.container-photo::before {
   display: inline-block;
   content: "Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.";
   color: var(--white-color);
 
-font-weight: normal;
-font-size: 18px;
-line-height: 1.5;
-padding: 63px 24px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 63px 24px;
   width: 100%;
   height: 100%;
   background-color: var(--blue-color);
   position: absolute;
-  transform:translateY(100%) ;
- transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
- opacity: 0.8;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.8;
 }
-.portfolio-item:hover .container-photo::before{
+.portfolio-item:hover .container-photo::before {
   transform: translateY(0);
 }
 
-.portfolio-item:hover{
-  background: #FFFFFF;
-border: 1px solid #EEEEEE;
-box-sizing: border-box;
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-item:hover {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-img {
   margin-top: 0;
   margin-bottom: 20px;
   width: 370px;
 }
-
 
 .portfolio-title {
   font-size: 18px;
