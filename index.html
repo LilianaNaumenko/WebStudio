@@ -16,9 +16,46 @@
   <body>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+
         <button data-modal-close class="button-close">
-          <img src="./images.new/Vector.svg" alt="" />
+          <svg
+            class="close-photo"
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z"
+            />
+          </svg>
         </button>
+        <form class="modal-form">
+          <label for="name">Имя</label>
+          <input class="information" type="name" name="name" id="name" />
+
+          <label for="tel">Телефон</label>
+          <input class="information" type="tel" name="tel" id="tel" />
+
+          <label for="email">Почта</label>
+          <input class="information" type="email" name="email" id="email" />
+
+          <label for="feedback">Комментарий</label>
+          <textarea
+            name="feedback"
+            id="feedback"
+            rows="10"
+            placeholder="Введите текст"
+          ></textarea>
+
+          <label for="politics"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="politics-contract" href="">Условия договора</a>
+          </label>
+          <input type="checkbox" name="politics" id="politics" />
+        </form>
+        <button class="button-form">Отправить</button>
       </div>
     </div>
     <header>
@@ -417,6 +454,21 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="container-footer-form">
+          <h3 class="footer-form-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
+          <div class="container-form-button">
+            <form class="footer-form">
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </form>
+            <button class="footer-form-button">Подписаться</button>
+          </div>
         </div>
       </div>
     </footer>

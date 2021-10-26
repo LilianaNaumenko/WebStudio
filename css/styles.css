@@ -196,11 +196,11 @@ header {
   z-index: 1;
   transition: transform 250ms ease-in-out, opacity 250ms linear;
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+/* модальное окно */
 .modal {
   position: absolute;
   top: 50%;
@@ -226,6 +226,63 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.close-photo {
+  fill: black;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15px;
+  text-align: center;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+.modal-form label {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--secondary-black-color);
+  padding-bottom: 4px;
+  padding-top: 10px;
+}
+
+.information {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.modal-form textarea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.politics-contract {
+  color: var(--blue-color);
+}
+.button-form {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 10px 56px;
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
 }
 /* секция чем мы занимаемся */
 .activity-section {
@@ -518,6 +575,42 @@ header {
 .footer-list {
   display: flex;
 }
+.container-footer-form {
+  margin-left: 109px;
+}
+.container-form-button {
+  display: flex;
+  flex-direction: row;
+}
+.footer-form-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--white-color);
+}
+.footer-form input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  margin-right: 12px;
+}
+.footer-form-button {
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+}
+
 /* Портфолио */
 /* Фильтры */
 .filters-section {
