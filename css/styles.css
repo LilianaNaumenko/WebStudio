@@ -45,7 +45,7 @@ button {
   padding-left: 15px;
   padding-right: 15px;
 }
-header {
+.header {
   border: 1px solid #ececec;
 }
 /* Шапка профиля */
@@ -81,7 +81,19 @@ header {
 .link-item-page:not(:last-child) {
   margin-right: 50px;
 }
-
+.link-active-page {
+  position: relative;
+}
+.link-active-page::after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-color);
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
 .link-page {
   color: var(--basic-black-color);
 
@@ -252,24 +264,37 @@ header {
 .information-input {
   width: 448px;
   height: 40px;
+  padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   margin-top: 0;
+  cursor: pointer;
 }
 
 .information-input:focus + .information-label {
   color: var(--blue-color);
+  transform: translate(-42px, -100%);
 }
 .information-label {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 42px;
   padding-top: 10px;
+  padding-bottom: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 12px;
   line-height: 1.7;
   color: var(--secondary-black-color);
-  padding-bottom: 4px;
+  cursor: pointer;
+}
+.information-icon {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  fill: var(--basic-black-color);
+}
+.information-input:focus ~ .information-icon {
+  fill: var(--blue-color);
 }
 
 .modal-form textarea {
@@ -289,6 +314,14 @@ header {
 .feedback {
   margin-bottom: 20px;
 }
+.feedback-lable {
+  padding-left: 15px;
+  left: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.information-input:focus ~ .feedback-lable {
+  transform: translate(-18%, -100%);
+}
 .politics-container {
   display: flex;
   justify-content: center;
@@ -298,6 +331,7 @@ header {
 .politics-checkbox {
   width: 15px;
   height: 15px;
+  cursor: pointer;
 }
 .politics {
   font-size: 14px;
@@ -616,11 +650,15 @@ header {
 .footer-list {
   display: flex;
 }
+.footer-form {
+  display: flex;
+}
 .container-footer-form {
   margin-left: 109px;
 }
 .container-form-button {
   display: flex;
+  position: relative;
   flex-direction: row;
 }
 
@@ -640,6 +678,9 @@ header {
   margin-right: 12px;
 }
 .footer-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -652,7 +693,9 @@ header {
   border-style: none;
   cursor: pointer;
 }
-
+.footer-form-icon {
+  margin-left: 10px;
+}
 /* Портфолио */
 /* Фильтры */
 .filters-section {
