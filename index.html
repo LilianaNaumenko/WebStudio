@@ -32,30 +32,55 @@
           </svg>
         </button>
         <form class="modal-form">
-          <label for="name">Имя</label>
-          <input class="information" type="name" name="name" id="name" />
+          <div class="modal-form-container">
+            <input
+              class="information-input"
+              type="name"
+              name="name"
+              id="name"
+            />
+            <label class="information-label" for="name">Имя</label>
+          </div>
 
-          <label for="tel">Телефон</label>
-          <input class="information" type="tel" name="tel" id="tel" />
+          <div class="modal-form-container">
+            <input class="information-input" type="tel" name="tel" id="tel" />
+            <label class="information-label" for="tel">Телефон</label>
+          </div>
 
-          <label for="email">Почта</label>
-          <input class="information" type="email" name="email" id="email" />
+          <div class="modal-form-container">
+            <input
+              class="information-input"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <label class="information-label" for="email">Почта</label>
+          </div>
 
-          <label for="feedback">Комментарий</label>
-          <textarea
-            name="feedback"
-            id="feedback"
-            rows="10"
-            placeholder="Введите текст"
-          ></textarea>
+          <div class="modal-form-container feedback">
+            <textarea
+              class="information-input"
+              name="feedback"
+              id="feedback"
+              rows="10"
+            ></textarea>
+            <label class="information-label" for="feedback">Комментарий</label>
+          </div>
 
-          <label for="politics"
-            >Соглашаюсь с рассылкой и принимаю
-            <a class="politics-contract" href="">Условия договора</a>
-          </label>
-          <input type="checkbox" name="politics" id="politics" />
+          <div class="politics-container">
+            <input
+              class="politics-checkbox"
+              type="checkbox"
+              name="politics"
+              id="politics"
+            />
+            <label class="politics" for="politics"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="politics-contract" href="">Условия договора</a>
+            </label>
+          </div>
+          <button class="button-form">Отправить</button>
         </form>
-        <button class="button-form">Отправить</button>
       </div>
     </div>
     <header>
@@ -468,6 +493,9 @@
               />
             </form>
             <button class="footer-form-button">Подписаться</button>
+            <svg>
+              <use href="./images.new/telegram.svg"></use>
+            </svg>
           </div>
         </div>
       </div>
