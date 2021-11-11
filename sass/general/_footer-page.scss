@@ -1,0 +1,140 @@
+/* Футер страницы */
+
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.container-footer-icon {
+  display: flex;
+}
+.container-join {
+  margin-left: 70px;
+}
+
+.logo-footer {
+  color: $white-color;
+  text-decoration: none;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.footer-address {
+  color: $white-color;
+
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.19;
+  font-style: normal;
+
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.footer-email {
+  color: $footer-shadowy;
+  text-decoration: none;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 9px;
+  display: inline-block;
+}
+
+.footer-tel {
+  color: $footer-shadowy;
+  text-decoration: none;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-join {
+  font-style: 400;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 14;
+  color: $white-color;
+}
+
+.social-icon-footer {
+  width: 20px;
+  height: 20px;
+  fill: $white-color;
+}
+
+.footer-network {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-list {
+  display: flex;
+}
+.footer-form {
+  display: flex;
+
+  & input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    background-color: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+}
+.container-footer-form {
+  margin-left: 109px;
+}
+.container-form-button {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.footer-form-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $white-color;
+}
+
+.footer-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  color: $white-color;
+  background-color: $blue-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.footer-form-icon {
+  margin-left: 10px;
+}

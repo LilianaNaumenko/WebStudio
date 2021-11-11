@@ -1,0 +1,95 @@
+// секция, чем мы занимаемся
+
+.activity-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.activity-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.activity-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.activity-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.activity-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+}
+.activity-text {
+  color: $secondary-black-color;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 270px;
+}
+/* чем мы занимаемся */
+
+.direction {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.direction-section {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+.direction-list {
+  display: flex;
+}
+
+.direction-item {
+  position: relative;
+  width: 370px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.container-position::before {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  padding: 27px 82px;
+
+  display: inline-block;
+  width: 370px;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  top: 224px;
+}
+.mac::before {
+  content: "ДЕСКОПНЫЕ ПРИЛОЖЕНИЯ";
+}
+.iphone::before {
+  content: "МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ";
+}
+
+.ipad::before {
+  content: "ДИЗАЙНЕРСКИЕ РЕШЕНИЯ";
+}

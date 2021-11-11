@@ -1,0 +1,113 @@
+.header-container {
+  display: flex;
+  align-items: center;
+}
+//  логотип в шапке профиля
+.logo {
+  color: $basic-black-color;
+  text-decoration: none;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  margin-right: 93px;
+}
+
+.span {
+  color: $blue-color;
+}
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+// контакты в шапке  профиля
+
+.link-contact {
+  display: flex;
+  margin-left: auto;
+}
+.link-item-page:not(:last-child) {
+  margin-right: 50px;
+}
+.link-active-page {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: $blue-color;
+    border-radius: 2px;
+  }
+}
+
+.link-page {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $basic-black-color;
+
+  text-decoration: none;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+}
+.active-page {
+  color: $blue-color;
+}
+
+.link-header {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  color: $secondary-black-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $blue-color;
+  }
+}
+
+.icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: $secondary-black-color;
+
+  .link-header:hover &,
+  .link-header:focus & {
+    fill: $blue-color;
+  }
+}
+
+.icon-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: $secondary-black-color;
+
+  .link-header:hover &,
+  .link-header:focus & {
+    fill: $blue-color;
+  }
+}

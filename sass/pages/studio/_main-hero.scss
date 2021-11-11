@@ -1,0 +1,48 @@
+// герой
+.hero {
+  display: flex;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  justify-content: center;
+  margin-right: auto;
+  background-image: url("../images.new/office-copy.jpg");
+  background-color: #2f303a;
+}
+
+// секция основа main
+
+.main-section {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.main-section-title {
+  color: $white-color;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.main-section-button {
+  color: $white-color;
+  background-color: $blue-color;
+  border: none;
+  margin-top: 0;
+
+  padding: 10px 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
