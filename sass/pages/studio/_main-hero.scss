@@ -1,13 +1,22 @@
 // герой
 .hero {
   display: flex;
-  height: 600px;
+
   max-width: 1600px;
   margin-left: auto;
   justify-content: center;
   margin-right: auto;
   background-image: url("../images.new/office-copy.jpg");
+  background-size: contain;
   background-color: #2f303a;
+
+  @media screen and (min-width: $tablet) {
+    height: 400px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 600px;
+  }
 }
 
 // секция основа main
@@ -20,14 +29,29 @@
   text-align: center;
   letter-spacing: 0.06em;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .main-section-title {
   color: $white-color;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+  }
 }
 
 .main-section-button {

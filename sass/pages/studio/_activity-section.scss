@@ -1,13 +1,37 @@
 // секция, чем мы занимаемся
 
 .activity-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.activity-item {
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop) {
+    width: auto;
+  }
 }
 .activity-item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+  }
 }
-
+.activity-item:nth-child(-n + 2) {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
 .activity-icon-container {
   display: flex;
   justify-content: center;
@@ -17,6 +41,14 @@
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
 }
 
 .activity-icon {
@@ -38,7 +70,6 @@
   line-height: 1.7;
   margin-top: 0;
   margin-bottom: 0;
-  width: 270px;
 }
 /* чем мы занимаемся */
 
