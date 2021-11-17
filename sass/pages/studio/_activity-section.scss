@@ -85,6 +85,10 @@
 .direction-section {
   padding-top: 0;
   padding-bottom: 94px;
+
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }
 .direction-list {
   display: flex;

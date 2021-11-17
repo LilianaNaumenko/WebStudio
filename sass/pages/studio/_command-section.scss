@@ -8,19 +8,34 @@
 .command-photo {
   margin-top: 0;
   margin-bottom: 30px;
-  width: 270px;
 
   display: block;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
 }
 
 .command-title {
   font-weight: 700;
-  font-size: 36px;
+
   line-height: 1.17;
   text-align: center;
 
   margin-top: 0;
   margin-bottom: 50px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
 }
 
 .command-item {
@@ -31,11 +46,12 @@
   border-radius: 0px 0px 4px 4px;
   padding-bottom: 30px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  &:nth-child(2n + 1) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 30px;
+    }
   }
 }
-
 .command-person {
   color: $secondary-black-color;
 

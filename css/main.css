@@ -231,7 +231,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
     font-size: 26px;
@@ -260,7 +260,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -283,7 +283,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .link-contact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -304,7 +304,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .link-contact-item:not(:last-child) {
     margin-right: 50px;
   }
@@ -369,7 +369,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .link-header {
     font-size: 14px;
   }
@@ -420,7 +420,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .hero {
     height: 600px;
   }
@@ -442,7 +442,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .main-section {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -461,7 +461,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .main-section-title {
     font-size: 44px;
   }
@@ -488,7 +488,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .activity-section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -501,13 +501,13 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .activity-item {
     width: auto;
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .activity-item:not(:last-child) {
     margin-right: 30px;
   }
@@ -519,7 +519,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .activity-item:nth-child(-n + 2) {
     margin-bottom: 0;
   }
@@ -548,7 +548,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .activity-icon-container {
     width: 270px;
   }
@@ -587,6 +587,12 @@
 .direction-section {
   padding-top: 0;
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1200px) {
+  .direction-section {
+    display: none;
+  }
 }
 
 .direction-list {
@@ -639,17 +645,39 @@
 .command-photo {
   margin-top: 0;
   margin-bottom: 30px;
-  width: 270px;
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .command-photo {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command-photo {
+    width: 270px;
+  }
 }
 
 .command-title {
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .command-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command-title {
+    font-size: 36px;
+  }
 }
 
 .command-item {
@@ -661,8 +689,10 @@
   padding-bottom: 30px;
 }
 
-.command-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .command-item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
 }
 
 .command-person {
@@ -732,13 +762,38 @@
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .clients-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 .clients-title {
   font-weight: 700;
-  font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    font-size: 36px;
+  }
 }
 
 .clients-icon {
@@ -751,7 +806,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 92px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
@@ -762,6 +816,18 @@
   fill: #2196f3;
   border: 1px solid #2196f3;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .clients-icon {
+    width: calc((100% - 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-icon {
+    width: 170px;
+  }
 }
 
 /* Футер страницы */
@@ -1095,7 +1161,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 1230px;
   }
