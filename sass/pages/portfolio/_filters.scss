@@ -1,6 +1,12 @@
 /* Фильтры */
 .filters-section {
-  padding-top: 94px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+  }
 }
 
 .filters {

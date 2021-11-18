@@ -1,7 +1,14 @@
 /* Постоянные клиенты */
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .clients-list {
   display: flex;
@@ -54,5 +61,13 @@
   }
   @media screen and (min-width: $desktop) {
     width: 170px;
+  }
+}
+.clients-icon:nth-child(-n + 3) {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
   }
 }

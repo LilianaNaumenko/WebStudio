@@ -2,8 +2,16 @@
 
 .command-section {
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .command-photo {
   margin-top: 0;
@@ -52,6 +60,14 @@
     }
   }
 }
+.command-item:nth-child(-n + 2) {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
+}
 .command-person {
   color: $secondary-black-color;
 
@@ -75,9 +91,17 @@
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+
   padding-right: 32px;
   padding-left: 32px;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+  }
 }
 
 .social-network {

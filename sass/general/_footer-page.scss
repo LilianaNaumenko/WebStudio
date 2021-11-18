@@ -19,12 +19,20 @@
 
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
+
   line-height: 1.19;
 
   margin-top: 0;
   margin-bottom: 20px;
   display: inline-block;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+  }
 }
 
 .footer-address {
@@ -93,13 +101,20 @@
   display: flex;
 
   & input {
-    width: 358px;
     height: 50px;
     padding: 15px 16px;
     background-color: #2f303a;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     margin-right: 12px;
+
+    @media screen and (min-width: $tablet) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+    }
   }
 }
 .container-footer-form {
