@@ -8,9 +8,26 @@
 
 .container-footer-icon {
   display: flex;
+
+  @media screen and (min-width: $tablet) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 .container-join {
-  margin-left: 70px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 165px;
+    margin-bottom: 102px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+    margin-bottom: 0px;
+  }
 }
 
 .logo-footer {
@@ -116,14 +133,32 @@
       width: 358px;
     }
   }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+.footer-address-and-social-media {
+  display: flex;
 }
 .container-footer-form {
-  margin-left: 109px;
+  @media screen and (min-width: $tablet) {
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 109px;
+  }
 }
 .container-form-button {
   display: flex;
   position: relative;
-  flex-direction: row;
 }
 
 .footer-form-title {
@@ -131,8 +166,15 @@
   font-size: 14px;
   line-height: 1.14;
   color: $white-color;
-}
 
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
+}
 .footer-form-button {
   display: flex;
   justify-content: center;
@@ -148,6 +190,15 @@
   border-radius: 4px;
   border-style: none;
   cursor: pointer;
+}
+.footer-form-imput {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+  }
 }
 
 .footer-form-icon {
