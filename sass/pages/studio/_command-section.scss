@@ -2,11 +2,8 @@
 
 .command-section {
   background-color: #f5f4fa;
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   @media screen and (min-width: $desktop) {
     padding-top: 94px;
@@ -16,7 +13,7 @@
 .command-photo {
   margin-top: 0;
   margin-bottom: 30px;
-
+  width: 450px;
   display: block;
 
   @media screen and (min-width: $tablet) {
@@ -59,15 +56,22 @@
       margin-right: 30px;
     }
   }
-}
-.command-item:nth-child(-n + 2) {
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 30px;
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 0;
+
+  &:nth-child(-n + 2) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
   }
 }
+
 .command-person {
   color: $secondary-black-color;
 
@@ -94,10 +98,7 @@
 
   padding-right: 32px;
   padding-left: 32px;
-
-  @media screen and (min-width: $tablet) {
-    justify-content: center;
-  }
+  justify-content: center;
 
   @media screen and (min-width: $desktop) {
     justify-content: space-between;

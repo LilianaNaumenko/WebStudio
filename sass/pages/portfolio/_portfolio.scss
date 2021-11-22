@@ -54,6 +54,7 @@
 .container-photo {
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 
   &::before {
     display: inline-block;

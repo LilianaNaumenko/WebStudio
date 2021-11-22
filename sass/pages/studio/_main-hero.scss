@@ -9,10 +9,7 @@
   background-image: url("../images.new/office-copy.jpg");
   background-size: contain;
   background-color: #2f303a;
-
-  @media screen and (min-width: $tablet) {
-    height: 400px;
-  }
+  height: 400px;
 
   @media screen and (min-width: $desktop) {
     height: 600px;
@@ -28,11 +25,8 @@
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
-
-  @media screen and (min-width: $tablet) {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   @media screen and (min-width: $desktop) {
     padding-top: 200px;
@@ -44,10 +38,7 @@
   color: $white-color;
   margin-top: 0;
   margin-bottom: 30px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 26px;
-  }
+  font-size: 26px;
 
   @media screen and (min-width: $desktop) {
     font-size: 44px;
