@@ -8,11 +8,8 @@
 
 .container-footer-icon {
   display: flex;
-
-  @media screen and (min-width: $tablet) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  flex-wrap: wrap;
+  justify-content: center;
 
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
@@ -41,10 +38,12 @@
 
   margin-top: 0;
   margin-bottom: 20px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 
   @media screen and (min-width: $tablet) {
     font-size: 24px;
+    justify-content: flex-start;
   }
 
   @media screen and (min-width: $desktop) {
@@ -94,6 +93,13 @@
   font-size: 14px;
   line-height: 1, 14;
   color: $white-color;
+  margin-top: 60px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    margin-top: 0px;
+    text-align: start;
+  }
 }
 
 .social-icon-footer {
@@ -116,6 +122,8 @@
 }
 .footer-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
   & input {
     height: 50px;
@@ -124,19 +132,11 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     margin-right: 12px;
-
-    @media screen and (min-width: $tablet) {
-      width: 450px;
-    }
+    width: 450px;
 
     @media screen and (min-width: $desktop) {
       width: 358px;
     }
-  }
-
-  @media screen and (min-width: $tablet) {
-    flex-direction: column;
-    align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
@@ -144,12 +144,19 @@
   }
 }
 .footer-address-and-social-media {
-  display: flex;
+  display: blok;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 .container-footer-form {
+  margin-left: 0px;
+  align-items: center;
+  margin-top: 60px;
+
   @media screen and (min-width: $tablet) {
-    margin-left: 0px;
-    align-items: center;
+    margin-top: 0px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -166,10 +173,7 @@
   font-size: 14px;
   line-height: 1.14;
   color: $white-color;
-
-  @media screen and (min-width: $tablet) {
-    text-align: center;
-  }
+  text-align: center;
 
   @media screen and (min-width: $desktop) {
     text-align: left;
@@ -192,9 +196,7 @@
   cursor: pointer;
 }
 .footer-form-imput {
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 
   @media screen and (min-width: $desktop) {
     margin-bottom: 0px;

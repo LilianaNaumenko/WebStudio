@@ -11,10 +11,7 @@
 .clients-list {
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: $tablet) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
@@ -43,6 +40,7 @@
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  width: calc((100% - 30px) / 2);
 
   &:hover,
   &:focus {
@@ -50,6 +48,7 @@
     border: 1px solid $blue-color;
     cursor: pointer;
   }
+
   @media screen and (min-width: $tablet) {
     width: calc((100% - 30px) / 3);
   }
