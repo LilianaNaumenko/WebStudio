@@ -42,7 +42,9 @@
 }
 
 // контакты в шапке  профиля
-
+.navigation-header {
+  display: none;
+}
 .link-contact {
   display: flex;
   margin-left: auto;

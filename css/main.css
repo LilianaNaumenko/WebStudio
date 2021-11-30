@@ -268,6 +268,10 @@
   }
 }
 
+.navigation-header {
+  display: none;
+}
+
 .link-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +415,8 @@
           justify-content: center;
   margin-right: auto;
   background-image: url("../images.new/office-copy.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-color: #2f303a;
   height: 400px;
 }
@@ -935,6 +940,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .footer-contact-list {
+    text-align: center;
+  }
+}
+
 .footer-address {
   color: #ffffff;
   font-family: Roboto;
@@ -1024,8 +1035,13 @@
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin-right: 12px;
   width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form input {
+    margin-right: 12px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
