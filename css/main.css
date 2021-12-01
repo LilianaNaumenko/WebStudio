@@ -404,6 +404,26 @@
   fill: #2196f3;
 }
 
+.button-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  background: white;
+}
+
+.button-menu .icon-close {
+  display: none;
+}
+
+.button-menu .is-open .icon-close {
+  display: block;
+}
+
+.button-menu .is-open .icon-burger {
+  display: none;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;

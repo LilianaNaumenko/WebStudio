@@ -155,3 +155,20 @@
     fill: $blue-color;
   }
 }
+.button-menu {
+  display: inline-flex;
+  padding: 0;
+  background: white;
+
+  & .icon-close {
+    display: none;
+  }
+
+  & .is-open .icon-close {
+    display: block;
+  }
+
+  & .is-open .icon-burger {
+    display: none;
+  }
+}
