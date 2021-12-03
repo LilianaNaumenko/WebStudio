@@ -410,17 +410,18 @@
   display: inline-flex;
   padding: 0;
   background: white;
+  border: none;
 }
 
 .button-menu .icon-close {
   display: none;
 }
 
-.button-menu .is-open .icon-close {
+.button-menu.is-open .icon-close {
   display: block;
 }
 
-.button-menu .is-open .icon-burger {
+.button-menu.is-open .icon-burger {
   display: none;
 }
 

@@ -159,16 +159,17 @@
   display: inline-flex;
   padding: 0;
   background: white;
+  border: none;
 
   & .icon-close {
     display: none;
   }
 
-  & .is-open .icon-close {
+  &.is-open .icon-close {
     display: block;
   }
 
-  & .is-open .icon-burger {
+  &.is-open .icon-burger {
     display: none;
   }
 }
