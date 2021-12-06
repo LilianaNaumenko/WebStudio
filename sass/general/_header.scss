@@ -1,6 +1,8 @@
 .header-container {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 //  логотип в шапке профиля
 .logo {
@@ -171,5 +173,22 @@
 
   &.is-open .icon-burger {
     display: none;
+  }
+}
+
+.content-menu {
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 100%;
+  left: 0;
+
+  background-color: pink;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+
+  &.is-open {
+    display: block;
   }
 }

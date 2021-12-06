@@ -56,6 +56,12 @@
     width: 170px;
   }
 }
+// .clients-icon:nth-child(-n + 2) {
+//   @media screen and (max-whidth: 767px) {
+//     margin-bottom: 30px;
+//   }
+// }
+
 .clients-icon:nth-child(-n + 3) {
   @media screen and (min-width: $tablet) {
     margin-bottom: 30px;
