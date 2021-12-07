@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 2;
   -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
   transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, opacity 250ms linear;
@@ -251,6 +251,31 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    display: none;
+  }
+}
+
+.header-mobile-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .header-mobile-container {
+    display: none;
+  }
 }
 
 .logo {
@@ -532,6 +557,12 @@
 @media screen and (min-width: 1200px) {
   .activity-item:not(:last-child) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .activity-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -888,6 +919,12 @@
 @media screen and (min-width: 1200px) {
   .clients-icon {
     width: 170px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clients-icon:nth-child(n + 2) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1356,6 +1393,7 @@
 }
 
 .button-menu {
+  z-index: 1;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1376,22 +1414,35 @@
   display: none;
 }
 
-.content-menu {
-  display: none;
-  position: absolute;
-  display: none;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  height: 796px;
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  font-size: 12px;
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
 }
 
-.content-menu.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .content-menu {
+    display: none;
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 796px;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .content-menu.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-menu {
+    display: none;
+  }
 }
 
 html {
@@ -1418,6 +1469,10 @@ body ul {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+body.is-open {
+  overflow: hidden;
 }
 
 button {

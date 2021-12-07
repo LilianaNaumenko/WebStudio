@@ -1,5 +1,6 @@
 // меню в хедере
 .button-menu {
+  z-index: 1;
   display: inline-flex;
   padding: 0;
   background: white;
@@ -16,23 +17,31 @@
   &.is-open .icon-burger {
     display: none;
   }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 
 .content-menu {
-  display: none;
-  position: absolute;
-  display: none;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  height: 796px;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 796px;
 
-  background-color: $white-color;
-  padding: 20px;
-  text-align: center;
-  font-size: 12px;
+    background-color: $white-color;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
   }
 }
