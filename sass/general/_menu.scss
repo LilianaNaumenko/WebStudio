@@ -1,0 +1,38 @@
+// меню в хедере
+.button-menu {
+  display: inline-flex;
+  padding: 0;
+  background: white;
+  border: none;
+
+  & .icon-close {
+    display: none;
+  }
+
+  &.is-open .icon-close {
+    display: block;
+  }
+
+  &.is-open .icon-burger {
+    display: none;
+  }
+}
+
+.content-menu {
+  display: none;
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  height: 796px;
+
+  background-color: $white-color;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+
+  &.is-open {
+    display: block;
+  }
+}

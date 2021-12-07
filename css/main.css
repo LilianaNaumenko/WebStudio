@@ -305,10 +305,6 @@
   }
 }
 
-.navigation-header {
-  display: none;
-}
-
 .link-contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,43 +435,6 @@
 .link-header:hover .icon-tel,
 .link-header:focus .icon-tel {
   fill: #2196f3;
-}
-
-.button-menu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 0;
-  background: white;
-  border: none;
-}
-
-.button-menu .icon-close {
-  display: none;
-}
-
-.button-menu.is-open .icon-close {
-  display: block;
-}
-
-.button-menu.is-open .icon-burger {
-  display: none;
-}
-
-.content-menu {
-  position: absolute;
-  display: none;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  background-color: pink;
-  padding: 20px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.content-menu.is-open {
-  display: block;
 }
 
 .hero {
@@ -642,7 +601,7 @@
   font-size: 14px;
   line-height: 1.7;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 /* чем мы занимаемся */
@@ -1394,6 +1353,45 @@
   margin-top: 0;
   margin-bottom: 20px;
   margin-left: 24px;
+}
+
+.button-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  background: white;
+  border: none;
+}
+
+.button-menu .icon-close {
+  display: none;
+}
+
+.button-menu.is-open .icon-close {
+  display: block;
+}
+
+.button-menu.is-open .icon-burger {
+  display: none;
+}
+
+.content-menu {
+  display: none;
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  height: 796px;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.content-menu.is-open {
+  display: block;
 }
 
 html {
