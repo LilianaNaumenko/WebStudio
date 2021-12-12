@@ -584,7 +584,6 @@
   background-image: url("../images.new/office-copy.jpg");
   background-size: cover;
   background-position: center;
-  background-color: #2f303a;
   height: 400px;
 }
 
@@ -729,7 +728,13 @@
   text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
+  .activity-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .activity-title {
     text-align: center;
   }
@@ -1420,9 +1425,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
