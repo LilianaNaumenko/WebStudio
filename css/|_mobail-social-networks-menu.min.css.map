@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,0BAA0B,AAAC,CACzB,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CAEhB,eAAe,CAAE,IAAI,CACtB",
+    "sources": [
+        "../sass/general/|_mobail-social-networks-menu.scss"
+    ],
+    "names": [],
+    "file": "|_mobail-social-networks-menu.min.css"
+}

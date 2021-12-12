@@ -6,12 +6,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #ececec;
 }
 .header-mobile-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #ececec;
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -40,6 +42,7 @@
   color: $blue-color;
 }
 .list {
+  padding-top: 33px;
   margin-top: 0;
   margin-bottom: 0;
   display: block;
@@ -48,6 +51,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 0;
   }
 
   @media screen and (min-width: $desktop) {
@@ -59,22 +63,62 @@
 
 .link-contact {
   display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+
   margin-left: auto;
 
   @media screen and (min-width: $tablet) {
     flex-direction: column;
   }
-
   @media screen and (min-width: $desktop) {
     flex-direction: row;
   }
 }
-.link-item-page:not(:last-child) {
+.link-item-page {
+  display: flex;
+  justify-content: start;
+  padding-left: 25px;
   @media screen and (min-width: $tablet) {
-    margin-right: 50px;
+    padding-left: 0;
   }
 }
-.link-contact-item:not(:last-child) {
+.link-item-page:nth-last-child(-n + 2) {
+  margin-bottom: 302px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.link-item-page:not(:last-child) {
+  margin-bottom: 35px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+.link-contact-item {
+  padding-left: 25px;
+  @media screen and (min-width: $tablet) {
+    padding-left: 0;
+  }
+}
+.link-contact-item:first-child > .link-header {
+  font-size: 24px;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}
+.link-contact-item:last-child {
+  margin-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0px;
+  }
+}
+.link-contact-item:first-child {
   @media screen and (min-width: $tablet) {
     margin-bottom: 10px;
   }
@@ -83,37 +127,42 @@
   }
 }
 .link-active-page {
-  position: relative;
+  @media screen and (min-width: $tablet) {
+    position: relative;
 
-  &::after {
-    position: absolute;
-    content: " ";
-    width: 100%;
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background-color: $blue-color;
-    border-radius: 2px;
+    &::after {
+      position: absolute;
+      content: " ";
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background-color: $blue-color;
+      border-radius: 2px;
+    }
   }
 }
 
 .link-page {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $basic-black-color;
-
-  text-decoration: none;
-
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  font-size: 40px;
+  line-height: 1.17;
+  text-decoration: none;
+  color: $basic-black-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: $blue-color;
+  }
+  @media screen and (min-width: $tablet) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
   }
 }
 .active-page {
@@ -121,22 +170,23 @@
 }
 
 .link-header {
-  display: flex;
-  text-decoration: none;
-  align-items: center;
-  color: $secondary-black-color;
-
   font-weight: 500;
-
-  line-height: 1.4;
-  letter-spacing: 0.02em;
-
+  font-size: 34px;
+  line-height: 40px;
+  color: $secondary-black-color;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: $blue-color;
   }
+
   @media screen and (min-width: $tablet) {
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
   }
 
   @media screen and (min-width: $desktop) {
@@ -145,6 +195,10 @@
 }
 
 .icon-mail {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -157,6 +211,10 @@
 }
 
 .icon-tel {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 10px;
   height: 16px;
   margin-right: 10px;

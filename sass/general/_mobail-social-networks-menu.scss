@@ -1,0 +1,26 @@
+.list-menu-social-networks {
+  display: flex;
+  justify-content: start;
+  padding-left: 25px;
+  margin-top: 64px;
+}
+.list-item-menu-social-networks:not(:last-child) {
+  margin-right: 10px;
+}
+.link-menu-social-networks {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+
+  text-decoration: none;
+  color: $blue-color;
+}
+
+.container-menu-social-networks {
+  height: 22px;
+  width: 1px;
+  background-color: #d3d3d3;
+}
+.list-item-container-menu-social-networks {
+  margin-right: 10px;
+}
