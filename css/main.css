@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  z-index: 4;
   -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
   transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, opacity 250ms linear;
@@ -131,6 +131,10 @@
   }
 }
 
+.information-input:focus {
+  border: 1px solid #2196f3;
+}
+
 .information-label {
   position: absolute;
   left: 42px;
@@ -146,10 +150,14 @@
   cursor: pointer;
 }
 
-.information-input:focus + .information-label {
-  color: #2196f3;
+.information-input:focus + .information-label,
+.information-input:not(:placeholder-shown) + .information-label {
   -webkit-transform: translate(-42px, -100%);
           transform: translate(-42px, -100%);
+}
+
+.information-input:focus + .information-label {
+  color: #2196f3;
 }
 
 .information-icon {
@@ -176,7 +184,8 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.information-input:focus ~ .feedback-lable {
+.information-input:focus ~ .feedback-lable,
+.information-input:not(:placeholder-shown) ~ .feedback-lable {
   -webkit-transform: translate(-18%, -100%);
           transform: translate(-18%, -100%);
 }
@@ -287,11 +296,15 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -448,6 +461,7 @@
 @media screen and (min-width: 1200px) {
   .link-contact-item:first-child {
     margin-right: 50px;
+    margin-bottom: 0px;
   }
 }
 
@@ -662,15 +676,15 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .activity-item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .activity-item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .activity-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -1115,26 +1129,25 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 24px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .logo-footer {
-    font-size: 24px;
+    font-size: 26px;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .logo-footer {
-    font-size: 26px;
-  }
+.footer-contact-list {
+  text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer-contact-list {
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -1182,7 +1195,7 @@
 
 @media screen and (min-width: 768px) {
   .footer-join {
-    margin-top: 0px;
+    margin-top: 14px;
     text-align: start;
   }
 }
@@ -1219,27 +1232,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.footer-form input {
-  height: 50px;
-  padding: 15px 16px;
-  background-color: #2f303a;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  width: 450px;
-}
-
-@media screen and (min-width: 768px) {
-  .footer-form input {
-    margin-right: 12px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer-form input {
-    width: 358px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1328,13 +1320,22 @@
   cursor: pointer;
 }
 
-.footer-form-imput {
+.footer-form-input {
+  height: 50px;
+  width: 450px;
   margin-bottom: 20px;
+  padding: 15px 16px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1200px) {
-  .footer-form-imput {
+  .footer-form-input {
+    width: 358px;
     margin-bottom: 0px;
+    margin-right: 12px;
   }
 }
 
@@ -1591,7 +1592,8 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 796px;
+    height: 100%;
+    overflow: auto;
     background-color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -1674,6 +1676,11 @@ body.is-open {
 
 button {
   margin: 0;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 .container {
